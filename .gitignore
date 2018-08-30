@@ -1,4 +1,8 @@
-data/*
+# Data
+data/train.p
+data/valid.p
+data/test.p
+
 .ipynb_checkpoints
 *.h5
 models
