@@ -2,10 +2,6 @@
 
 ## Writeup
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
-
 **Build a Traffic Sign Recognition Project**
 
 The goals / steps of this project are the following:
@@ -36,7 +32,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/LinasKo/CarND-Traffic-Sign-Classifier-Project/blob/master/notebooks/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -45,17 +41,31 @@ You're reading it! and here is a link to my [project code](https://github.com/ud
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of training set is **34799**
+* The size of the validation set is **4410**
+* The size of test set is **12630**
+* The shape of a traffic sign image is **(32, 32, 3)** ( or, if you see it as a tensor: **(1, 32, 32, 3)**)
+* The number of unique classes/labels in the data set is 43
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. From my experience, it is most important to gain a general understanding og the dataset first. Therefore, I visualised several examples of all traffic sign classes. I made 2 different visaulisations:
 
-![alt text][image1]
+* of the first 8 images in each traffic sign class
+* of 8 random images in each class
+
+<figure>
+	<center>
+		<img src="./results/classes_vis_0.png" width="40%">
+		<img src="./results/classes_vis_1.png" width="40%">
+		<figcaption>First 8 and Random 8 exampels of each traffic sign class</figcaption>
+	</center>
+</figure>
+
+This tells me that:
+
+* There are many very similar examples of particular traffic signs, possibly all. This means that the dataset is equivalent to a much smaller one, with added deformations / other augmentation. This will likely introduce bias and reduce training results, compared to a dataset consisting of completely unique images.
+* Running the second visualisation several times shows that for the majority of classes, there is a good variation of signs in the dark and signs in the light. The exact variation is unknown, but at least it doesn't seem that I should prioritize deeper investigations yet.
 
 ### Design and Test a Model Architecture
 

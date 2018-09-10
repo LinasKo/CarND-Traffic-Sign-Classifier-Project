@@ -1,0 +1,3 @@
+model_checkpoint_path: "D:\\Linas\\projects\\CarND-Traffic-Sign-Classifier-Project\\models\\2018-09-10_00_30_54.711205_lenet_a0.935"
+all_model_checkpoint_paths: "D:\\Linas\\projects\\CarND-Traffic-Sign-Classifier-Project\\models\\2018-09-10_00_30_54.711205_lenet_a0.933"
+all_model_checkpoint_paths: "D:\\Linas\\projects\\CarND-Traffic-Sign-Classifier-Project\\models\\2018-09-10_00_30_54.711205_lenet_a0.935"
